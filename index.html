@@ -2,26 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SafeStep – Direction Assistant</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blind Helper App</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <main class="app" role="main">
-    <h1 tabindex="0">SafeStep</h1>
+  <main class="container" role="main">
+    <h1 tabindex="0">Blind Helper App</h1>
 
-    <p tabindex="0" id="status">
-      Press Start to get voice directions.
+    <p id="instruction" tabindex="0">
+      Type or speak text and press Read Aloud.
     </p>
 
-    <button onclick="startNavigation()" aria-label="Start navigation">
-      ▶ Start Navigation
+    <label for="textInput" class="sr-only">Enter text</label>
+    <textarea id="textInput" placeholder="Enter text here" aria-label="Text input"></textarea>
+
+    <button onclick="readText()" aria-label="Read text aloud">
+      🔊 Read Aloud
     </button>
 
-    <button onclick="stopNavigation()" aria-label="Stop navigation">
-      ⏹ Stop
+    <button onclick="startListening()" aria-label="Speak input">
+      🎤 Speak
     </button>
+
+    <p id="status" tabindex="0"></p>
   </main>
 
   <script src="script.js"></script>
