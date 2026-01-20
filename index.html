@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SafeStep – Direction Assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="app" role="main">
+    <h1 tabindex="0">SafeStep</h1>
+
+    <p tabindex="0" id="status">
+      Press Start to get voice directions.
+    </p>
+
+    <button onclick="startNavigation()" aria-label="Start navigation">
+      ▶ Start Navigation
+    </button>
+
+    <button onclick="stopNavigation()" aria-label="Stop navigation">
+      ⏹ Stop
+    </button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
